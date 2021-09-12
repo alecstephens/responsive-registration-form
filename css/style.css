@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+#contact_info {
+    display: flex;
+}
+
 /* styles for header and main section of page*/
 
 h1 {
@@ -41,3 +45,54 @@ main:before {
     background: black;
 }
 
+/* styles for contact information of form */
+
+.contact_info {
+    flex-direction: column;
+    width: 100%;
+    border: none;
+    margin: 3px;
+    margin-bottom: 20px;
+    padding: 3px;
+    border-bottom: 3px solid black;
+}
+
+legend {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.contact_info input, label {
+    display: block;
+}
+
+input, select {
+    margin-bottom: 10px;
+    border-radius: 3px;
+    background: whitesmoke;
+    width: 100%;
+    height: 35px;
+    border: none;
+}
+
+input::placeholder {
+    float: right;
+    margin-top: 8px;
+    margin-right: 6px;
+    color:grey;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+#zip {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+/* styles for newsletter part of form */
+
+.newsletter {
+    border: none;
+}
