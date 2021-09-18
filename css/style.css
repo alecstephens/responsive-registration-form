@@ -6,12 +6,16 @@
     display: flex;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* styles for header and main section of page*/
 
 h1 {
     text-align: center;
     padding: 15px;
-    margin: -8px -20px 0;
+    margin: -8px -8px 0;
     color: white;
     background-color: purple;
     font-size: 1.5em;
@@ -125,7 +129,6 @@ input[type="radio"] {
 
 .newsletter label {
     text-align: left;
-    display: inline;
 }
 
 label.light, .newsletter input {
@@ -178,8 +181,53 @@ footer {
 
 /* Media Queries */
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
+    main, form, footer{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    
     body {
-        width: 100%;
+        margin-bottom: 15%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 35px;
+    }
+
+    h1 {
+        text-align: center;
+        padding: 15px;
+        margin: -8px -8px 0;
+        color: white;
+        background-color: purple;
+        font-size: 1.5em;
+    }
+
+   .contact_info input, label, select {
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .contact_info input, select{
+        width: 70%;
+        float: right;
+    }
+
+    .contact_info label {
+        float: left;
+    }
+
+    #zip {
+        width: 33%;
+    }
+
+    footer {
+        padding-top: 15px;
     }
 }
