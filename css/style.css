@@ -2,14 +2,6 @@
     box-sizing: border-box;
 }
 
-#contact_info {
-    display: flex;
-}
-
-body {
-    overflow-x: hidden;
-}
-
 /* styles for header and main section of page*/
 
 h1 {
@@ -34,8 +26,6 @@ main h2 {
     margin: 10px 0 0 0;
 }
 
-
-
 main:before {
     content:"";
     display: block;
@@ -50,6 +40,7 @@ main:before {
 /* styles for contact information of form */
 
 .contact_info {
+    display: flex;
     flex-direction: column;
     width: 100%;
     border: none;
@@ -190,6 +181,7 @@ footer {
     
     body {
         margin-bottom: 15%;
+        margin-right: 0;
     }
 
     main {
@@ -208,23 +200,29 @@ footer {
         background-color: purple;
         font-size: 1.5em;
     }
-
-   .contact_info input, label, select {
+    
+    div {
+        display: inline;
+    }
+    
+   .contact_info label {
+        width: 150px;
         display: inline-block;
-        margin-bottom: 15px;
+        text-align: left
     }
 
-    .contact_info input, select{
-        width: 70%;
-        float: right;
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        width: 60%;
+        float: right;   
     }
-
-    .contact_info label {
-        float: left;
-    }
-
+    
     #zip {
         width: 33%;
+        display: flex;
+        justify-content: last ;
     }
 
     footer {
