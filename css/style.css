@@ -14,11 +14,13 @@ h1 {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     position: relative;
     padding: 10px 5px;
     border-bottom: 3px solid black;
-    display: inline-block;
     margin-bottom: 25px;
 }
 
@@ -26,10 +28,14 @@ main h2 {
     margin: 10px 0 0 0;
 }
 
+main p {
+    margin: 15px;
+}
+
 main:before {
     content:"";
     display: block;
-    position:absolute;
+    position: absolute;
     left: 0;
     bottom: 5px;
     width: 100%;
@@ -40,9 +46,6 @@ main:before {
 /* styles for contact information of form */
 
 .contact_info {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
     border: none;
     margin: 3px;
     margin-bottom: 20px;
@@ -50,182 +53,91 @@ main:before {
     border-bottom: 3px solid black;
 }
 
-legend {
-    margin-bottom: 15px;
-    font-size: 1.4em;
+.wrapper {
+    list-style-type: none;
+    padding: 0;
 }
 
-.contact_info p {
-    margin: 10px 0 30px 0;
-}
-
-.contact_info input, label {
-    display: block;
-}
-
-.contact_info input:focus{
-    outline: 1px solid blue;
-}
-
-.contact_info input, select {
-    margin-bottom: 10px;
-    border-radius: 3px;
-    background: whitesmoke;
-    width: 100%;
-    height: 35px;
-    border: none;
+.form-row {
+    display: flex;
+    flex-direction: column;
+    padding: .5em;
 }
 
 input::placeholder {
     float: right;
     margin-top: 8px;
-    margin-right: 6px;
-    color:grey;
+    margin-right: 8px;
 }
 
-label {
+.contact_info label {
     margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    border-radius: 5px;
+    border: none;
+    background: whitesmoke;
+    height: 35px;
+    margin-bottom: 10px;
 }
 
 #zip {
     width: 50%;
-    margin-bottom: 20px;
 }
 
-/* styles for newsletter part of form */
+.contact_info input:focus {
+    outline: 1px solid blue;
+}
+
+/* styles for newsletter section */
 
 .newsletter {
-    border: none; 
+    border: none;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-    height: 15px;
-    float: left;
-    margin: 0;
-}
-
-input[type="checkbox"] {
-    width: 10%;
-    margin-right: 10px;
-    display: inline;
-}
-
-input[type="radio"] {
-    display: inline-block;
-    width: 10%;
-    margin-right: 10px;
-}
-
-
-.newsletter label {
-    text-align: left;
-}
-
-label.light, .newsletter input {
-    margin-bottom: 10px;
+.form-checkbox {
+    display: flex;
+    flex-direction: row;
+    padding: .5em;
+    padding-left: 0;
 }
 
 label.light {
-    font-weight: 300;
-    display: inline-block;
-    width: 45%;
-    text-align: left;
-}
-
-.newsletter p {
-    margin: 0;
-    margin-bottom: 10px;
+    float: right;
+    padding-left: .5em;
 }
 
 textarea {
     width: 100%;
     height: 100px;
-    border: none;
     background: whitesmoke;
     border-radius: 5px;
+    border: none
 }
 
-/* styles for footer and submit button */
+/* styles for submit button and footer */
 
-button {
-    width: 91%;
-    border: none;
-    height: 50px;
+button[type="submit"] {
+    display: block;
+    width: 85%;
+    padding: 10px;
     border-radius: 5px;
+    border: thin;
+    margin: 0 auto;
+    margin-bottom: 25px;
     background: magenta;
     color: white;
-    font-size: 1.2em;
-}
-
-.submit-button {
-    text-align: center;
-
+    font-size: 1.3em;
 }
 
 footer {
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: gray;
+    color: grey;
 }
 
-/* Media Queries */
 
-@media screen and (min-width: 768px) {
-    main, form, footer{
-        width: 50%;
-        margin: 0 auto;
-    }
 
-    
-    body {
-        margin-bottom: 15%;
-        margin-right: 0;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 15px;
-        margin-bottom: 35px;
-    }
-
-    h1 {
-        text-align: center;
-        padding: 15px;
-        margin: -8px -8px 0;
-        color: white;
-        background-color: purple;
-        font-size: 1.5em;
-    }
-    
-    div {
-        display: inline;
-    }
-    
-   .contact_info label {
-        width: 150px;
-        display: inline-block;
-        text-align: left
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    select {
-        width: 60%;
-        float: right;   
-    }
-    
-    #zip {
-        width: 33%;
-        display: flex;
-        justify-content: last ;
-    }
-
-    footer {
-        padding-top: 15px;
-    }
-}
