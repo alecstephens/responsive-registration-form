@@ -50,6 +50,10 @@ main:before {
     background: black;
 }
 
+legend {
+    font-size: 1.2em;
+}
+
 /* styles for contact information of form */
 
 .contact_info {
@@ -129,6 +133,7 @@ textarea {
     border: none
 }
 
+
 /* styles for submit button and footer */
 
 button[type="submit"] {
@@ -147,6 +152,7 @@ button[type="submit"] {
 footer {
     text-align: center;
     color: grey;
+    margin-bottom: 50px;
 }
 
 /* media queries */
