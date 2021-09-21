@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Georama', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    background: ivory;
+}
+
 /* styles for header and main section of page*/
 
 h1 {
@@ -80,10 +87,12 @@ input[type="tel"],
 select {
     border-radius: 5px;
     border: none;
-    background: whitesmoke;
+    background-color: rgb(231, 217, 217);
     height: 35px;
     margin-bottom: 10px;
+    transition: outline 1s linear;
 }
+
 
 #zip {
     width: 50%;
@@ -92,6 +101,7 @@ select {
 .contact_info input:focus {
     outline: 1px solid blue;
 }
+
 
 /* styles for newsletter section */
 
@@ -114,7 +124,7 @@ label.light {
 textarea {
     width: 100%;
     height: 100px;
-    background: whitesmoke;
+    background: rgb(231, 217, 217);
     border-radius: 5px;
     border: none
 }
@@ -137,6 +147,56 @@ button[type="submit"] {
 footer {
     text-align: center;
     color: grey;
+}
+
+/* media queries */
+
+@media screen and (min-width: 768px) {
+    header {
+        overflow-x: hidden;
+        font-size: .9em;
+    }
+
+    h1 {
+        margin: 0 auto;
+    }
+
+    main, form {
+        margin: 0 auto;
+        width: 60%;
+    }
+
+    main {
+        margin-top: 15px;
+    }
+
+    .contact_info {
+        margin-top: 20px;
+    }
+
+    .form-row {
+        justify-content: flex-end;
+        flex-direction: row;
+        padding: .5em;
+    }
+
+    .form-row label {
+        padding: .5em 1em .5em 0;
+        flex: 1;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select {
+        width: 70%;
+    }
+
+    #zip {
+        width: 25%;
+        margin-right: 45%;
+
+    }
 }
 
 
