@@ -55,7 +55,7 @@
                 <li class="form-row">
                 <label for="state">State</label>
                     <select id="state" name="user-state">
-                        <option value="" disable selected hidden>Select a State</option>
+                        <option value="" disabled selected hidden>Select a State</option>
                         <option value="alabama">AL</option>
                         <option value="alaska">AK</option>
                         <option value="arizona">AZ</option>
@@ -135,9 +135,10 @@
                 <input type="checkbox" id="javascript_news" name="newsletter" value="javascript">
                 <label class="light" for="javascript_news">Javascript News</label>
                 </li>
+            </ul>
 
                 <p>Newsletter Format</p>
-
+            <ul class="wrapper">
                 <li class="form-checkbox">
                 <input type="radio" id="html" name="format" value="html">
                 <label class="light" for="html">HTML</label>
@@ -148,8 +149,8 @@
                 <label class="light" for="plain_text">Plain Text</label>s
                 </li>
                 
-                <p>Other topics you'd like to hear about</p>
                 <li class="message">
+                <label for="topics">Other topics you'd like to hear about</label>
                 <textarea id="topics" name="topics"></textarea>
                 </li>
             </ul>
@@ -158,7 +159,6 @@
         <div class="submit-button">
             <button type="submit" form="form1" value="submit">Sign Up</button>
         </div>
-        </form>
     </form>
 
     <footer><em>Copyright The Code Review</em></footer>

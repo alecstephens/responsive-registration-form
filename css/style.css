@@ -125,9 +125,14 @@ label.light {
     padding-left: .5em;
 }
 
+.message {
+    margin-top: 15px;
+}
+
 textarea {
     width: 100%;
     height: 100px;
+    margin-top: 5px;
     background: rgb(231, 217, 217);
     border-radius: 5px;
     border: none
